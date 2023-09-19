@@ -7,11 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        'Lexend': ['Lexend Deca', 'sans-serif'],
+        'Montserrat': ['Montserrat', 'sans-serif'],
+        'Open Sans': ['Open Sans', 'sans-serif']
       },
+      colors: {
+        'primary': '#1c61e7',
+        'secondary': '#e6effd',
+      },
+      gridTemplateColumns: {
+        'open': '270px 1fr',
+        'close': '60px 1fr',
+      },
+      borderRadius: {
+        'ROne': '10px'
+      }
     },
   },
   plugins: [],
