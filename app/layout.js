@@ -1,8 +1,4 @@
-"use client"
-
-import { useState } from "react";
-import SideBar from "@/components/sideBar/SideBar";
-import SearchBar from '@/components/sideBar/SearchBar'
+import AllFiles from '@/components/AllFiles';
 import './globals.css';
 
 export const metadata = {
@@ -11,15 +7,10 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const [open, setOpen] = useState(false);
-
   return (
     <html lang="en">
-      <body className={`relative grid grid-cols-1 ${open ? "md:grid-cols-open" : "md:grid-cols-close"} grid-rows-1 font-Poppins transition duration-700 overflow-x-hidden`}
-       >
-        <SearchBar open={open} setOpen={setOpen} />
-        <SideBar open={open} setOpen={setOpen} />
-        {children}
+      <body >
+        <AllFiles children={children} />
       </body>
     </html>
   )
