@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SideBar from "@/components/sideBar/SideBar";
+import SearchBar from '@/components/sideBar/SearchBar'
 import './globals.css';
 
 export const metadata = {
@@ -14,8 +15,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`relative grid grid-rows-1 font-Montserrat transition duration-700 overflow-x-hidden`}
-      style={{ gridTemplateColumns: open ? '270px 1fr' : '60px 1fr' }} >
+      <body className={`relative grid grid-cols-1 ${open ? "md:grid-cols-open" : "md:grid-cols-close"} grid-rows-1 font-Poppins transition duration-700 overflow-x-hidden`}
+       >
+        <SearchBar open={open} setOpen={setOpen} />
         <SideBar open={open} setOpen={setOpen} />
         {children}
       </body>
